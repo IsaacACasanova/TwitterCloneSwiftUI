@@ -35,13 +35,13 @@ struct TweetRow: View {
                     .scaledToFit()
                     .frame(width: 30.0, height: 30.0)
             }
-            .padding()
+            .padding(8)
             HStack {
                 Text(viewModel.content)
                     .font(.body)
                     .bold()
             }
-            .padding()
+            .padding(8)
         }
     }
 }
