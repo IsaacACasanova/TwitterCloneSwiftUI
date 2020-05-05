@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06610400246113EA00059FF2 /* Previewed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 066103FF246113EA00059FF2 /* Previewed.swift */; };
 		ED024490245E0FD4006A3EBA /* SearchTweetsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED02448F245E0FD4006A3EBA /* SearchTweetsViewModel.swift */; };
 		ED0B5617245F104C00E0B93A /* TwitterModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0B5616245F104C00E0B93A /* TwitterModels.swift */; };
 		ED0B561B245F11C000E0B93A /* Deserialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0B561A245F11C000E0B93A /* Deserialization.swift */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		066103FF246113EA00059FF2 /* Previewed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Previewed.swift; sourceTree = "<group>"; };
 		ED02448F245E0FD4006A3EBA /* SearchTweetsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTweetsViewModel.swift; sourceTree = "<group>"; };
 		ED0B5616245F104C00E0B93A /* TwitterModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterModels.swift; sourceTree = "<group>"; };
 		ED0B561A245F11C000E0B93A /* Deserialization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deserialization.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				ED1ECC602460E89400202A39 /* Tweet+Preview.swift */,
+				066103FF246113EA00059FF2 /* Previewed.swift */,
 				ED1ECC672460EA0900202A39 /* TweetResponse+Preview.swift */,
 				ED1ECC622460E95C00202A39 /* TweetRowViewModel+Preview.swift */,
 			);
@@ -320,6 +323,7 @@
 				EDD358E3246248A2002AB9F7 /* EnvironmentValues+ImageCache.swift in Sources */,
 				ED7B1E8D245F72B9001391BB /* TweetRowViewModel.swift in Sources */,
 				ED024490245E0FD4006A3EBA /* SearchTweetsViewModel.swift in Sources */,
+				06610400246113EA00059FF2 /* Previewed.swift in Sources */,
 				EDA33D2E245E0315004892FB /* AppDelegate.swift in Sources */,
 				ED0B5617245F104C00E0B93A /* TwitterModels.swift in Sources */,
 				EDA33D30245E0315004892FB /* SceneDelegate.swift in Sources */,
