@@ -16,7 +16,7 @@ struct TweetRow: View {
     }
     
     var body: some View {
-        VStack {
+        VStack(alignment: .leading) {
             HStack {
                 Image("twitter_default_profile_image")
                     .resizable()
