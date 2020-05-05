@@ -32,14 +32,20 @@ struct TweetRow: View {
                 Image("Twitter_Logo_Blue")
                     .resizable()
                     .scaledToFit()
-                    .frame(width: 20.0, height: 20.0)
+                    .frame(width: 30.0, height: 30.0)
             }
             HStack {
                 Text(viewModel.content)
                     .font(.body)
                     .bold()
             }
-            .padding()
         }
+    }
+}
+
+
+struct TweetRow_Previews: PreviewProvider {
+    static var previews: some View {
+        TweetRow(viewModel: .preview)
     }
 }

@@ -53,3 +53,13 @@ extension SearchTweetsView {
         }
     }
 }
+
+struct SearchTweetsView_Previews: PreviewProvider {
+    static var previews: some View {
+        let mockService = MockTwitterService()
+        let viewModel = SearchTweetsViewModel(twitterService: mockService)
+        viewModel.searchText = "Kodak Black"
+        viewModel.dataSource = [.preview]
+        return SearchTweetsView(viewModel: viewModel)
+    }
+}
