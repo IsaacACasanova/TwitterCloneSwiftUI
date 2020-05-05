@@ -10,7 +10,7 @@ import Foundation
 
 extension TweetsResponse.Tweet {
     static let preview = TweetsResponse.Tweet(
-        text: "This is the content of my tweet",
+        text: "This is the content of my tweet it's extremely long and full of content check it out 4 score 7 years ago again",
         user: .preview
     )
 }

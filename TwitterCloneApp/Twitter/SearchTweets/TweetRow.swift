@@ -23,10 +23,11 @@ struct TweetRow: View {
                     .scaledToFit()
                     .frame(width: 40.0, height: 40.0)
                     .clipShape(Circle())
-                
                 VStack(alignment: .leading) {
                     Text(viewModel.name)
+                        .bold()
                     Text(viewModel.screenName)
+                        .font(.caption)
                 }
                 Spacer()
                 Image("Twitter_Logo_Blue")
@@ -34,11 +35,13 @@ struct TweetRow: View {
                     .scaledToFit()
                     .frame(width: 30.0, height: 30.0)
             }
+            .padding()
             HStack {
                 Text(viewModel.content)
                     .font(.body)
                     .bold()
             }
+            .padding()
         }
     }
 }

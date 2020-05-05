@@ -16,7 +16,7 @@ struct TweetRowViewModel {
     
     init(tweet: TweetsResponse.Tweet) {
         self.name = tweet.user.name
-        self.screenName = tweet.user.screenName
+        self.screenName = "@" + tweet.user.screenName
         self.avatarURL = tweet.user.avatar
         self.content = tweet.text
     }
