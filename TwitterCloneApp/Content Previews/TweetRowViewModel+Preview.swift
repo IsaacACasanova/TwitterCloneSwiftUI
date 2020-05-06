@@ -9,5 +9,14 @@
 import Foundation
 
 extension TweetRowViewModel {
-    static let preview = TweetRowViewModel(tweet: .preview)
+    static let preview = TweetRowViewModel(with: .preview)
+}
+
+private extension TweetRowViewModel {
+    init(with tweet: TweetsResponse.Tweet) {
+        self.name = tweet.user.name
+        self.screenName = "@" + tweet.user.screenName
+        self.avatarURL = URL(string: tweet.user.avatar)!
+        self.content = tweet.text
+    }
 }

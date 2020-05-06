@@ -9,6 +9,8 @@
 import SwiftUI
 
 struct TweetRow: View {
+    @Environment(\.imageCache) var cache: ImageCache
+    
     private let viewModel: TweetRowViewModel
     
     init(viewModel: TweetRowViewModel) {
@@ -18,11 +20,16 @@ struct TweetRow: View {
     var body: some View {
         VStack(alignment: .leading) {
             HStack {
-                Image("twitter_default_profile_image")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 40.0, height: 40.0)
-                    .clipShape(Circle())
+                AsyncImage(
+                    url: viewModel.avatarURL,
+                   cache: self.cache,
+                   placeholder: Image("twitter_default_profile_image"),
+                   configuration: { $0.resizable() }
+                )
+                .frame(width: 40.0, height: 40.0)
+                .clipShape(Circle())
+                .shadow(radius: 10)
+                
                 VStack(alignment: .leading) {
                     Text(viewModel.name)
                         .bold()

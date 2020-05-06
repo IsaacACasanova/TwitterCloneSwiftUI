@@ -8,16 +8,27 @@
 
 import Foundation
 
-struct TweetRowViewModel {
+protocol TweetRowViewModelType {
+    var name: String { get }
+    var screenName: String { get }
+    var avatarURL: URL { get }
+    var content: String { get }
+}
+
+struct TweetRowViewModel: TweetRowViewModelType {
     let name: String
     let screenName: String
-    let avatarURL: String
+    let avatarURL: URL
     let content: String
     
-    init(tweet: TweetsResponse.Tweet) {
+    init?(tweet: TweetsResponse.Tweet) {
+        guard let avatarURL = URL(string: tweet.user.avatar) else {
+            return nil
+        }
+        
         self.name = tweet.user.name
         self.screenName = "@" + tweet.user.screenName
-        self.avatarURL = tweet.user.avatar
+        self.avatarURL = avatarURL
         self.content = tweet.text
     }
 }

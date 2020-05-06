@@ -14,7 +14,6 @@
 		ED1ECC632460E95C00202A39 /* TweetRowViewModel+Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1ECC622460E95C00202A39 /* TweetRowViewModel+Preview.swift */; };
 		ED1ECC662460E9CF00202A39 /* MockTwitterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1ECC652460E9CF00202A39 /* MockTwitterService.swift */; };
 		ED1ECC682460EA0900202A39 /* TweetResponse+Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1ECC672460EA0900202A39 /* TweetResponse+Preview.swift */; };
-		ED7B1E87245F4813001391BB /* UIImage+Fetch.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7B1E86245F4813001391BB /* UIImage+Fetch.swift */; };
 		ED7B1E8D245F72B9001391BB /* TweetRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7B1E8C245F72B9001391BB /* TweetRowViewModel.swift */; };
 		ED7B1E8F245F90D6001391BB /* TweetRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7B1E8E245F90D6001391BB /* TweetRow.swift */; };
 		ED9EA918245F09920064C078 /* TwitterError.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9EA917245F09920064C078 /* TwitterError.swift */; };
@@ -25,6 +24,10 @@
 		EDA33D3A245E0316004892FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDA33D38245E0316004892FB /* LaunchScreen.storyboard */; };
 		EDA33D45245E0317004892FB /* TwitterCloneAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA33D44245E0317004892FB /* TwitterCloneAppTests.swift */; };
 		EDA5B928245E4C760053C8D6 /* TwitterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA5B927245E4C760053C8D6 /* TwitterService.swift */; };
+		EDD358E0246248A2002AB9F7 /* AsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD358DC246248A1002AB9F7 /* AsyncImage.swift */; };
+		EDD358E1246248A2002AB9F7 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD358DD246248A1002AB9F7 /* ImageCache.swift */; };
+		EDD358E2246248A2002AB9F7 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD358DE246248A2002AB9F7 /* ImageLoader.swift */; };
+		EDD358E3246248A2002AB9F7 /* EnvironmentValues+ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD358DF246248A2002AB9F7 /* EnvironmentValues+ImageCache.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,7 +48,6 @@
 		ED1ECC622460E95C00202A39 /* TweetRowViewModel+Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TweetRowViewModel+Preview.swift"; sourceTree = "<group>"; };
 		ED1ECC652460E9CF00202A39 /* MockTwitterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTwitterService.swift; sourceTree = "<group>"; };
 		ED1ECC672460EA0900202A39 /* TweetResponse+Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TweetResponse+Preview.swift"; sourceTree = "<group>"; };
-		ED7B1E86245F4813001391BB /* UIImage+Fetch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Fetch.swift"; sourceTree = "<group>"; };
 		ED7B1E8C245F72B9001391BB /* TweetRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetRowViewModel.swift; sourceTree = "<group>"; };
 		ED7B1E8E245F90D6001391BB /* TweetRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetRow.swift; sourceTree = "<group>"; };
 		ED9EA917245F09920064C078 /* TwitterError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterError.swift; sourceTree = "<group>"; };
@@ -60,6 +62,10 @@
 		EDA33D44245E0317004892FB /* TwitterCloneAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterCloneAppTests.swift; sourceTree = "<group>"; };
 		EDA33D46245E0317004892FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EDA5B927245E4C760053C8D6 /* TwitterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterService.swift; sourceTree = "<group>"; };
+		EDD358DC246248A1002AB9F7 /* AsyncImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncImage.swift; sourceTree = "<group>"; };
+		EDD358DD246248A1002AB9F7 /* ImageCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
+		EDD358DE246248A2002AB9F7 /* ImageLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		EDD358DF246248A2002AB9F7 /* EnvironmentValues+ImageCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EnvironmentValues+ImageCache.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,7 +100,7 @@
 		ED0B5618245F106C00E0B93A /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				ED7B1E85245F46A5001391BB /* Image Extensions */,
+				EDD358E4246248A6002AB9F7 /* AsyncImage */,
 				ED0B5619245F117600E0B93A /* Deserialization */,
 			);
 			path = Utilities;
@@ -124,14 +130,6 @@
 				ED1ECC652460E9CF00202A39 /* MockTwitterService.swift */,
 			);
 			path = Mocks;
-			sourceTree = "<group>";
-		};
-		ED7B1E85245F46A5001391BB /* Image Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				ED7B1E86245F4813001391BB /* UIImage+Fetch.swift */,
-			);
-			path = "Image Extensions";
 			sourceTree = "<group>";
 		};
 		ED9EA915245F048D0064C078 /* TwitterAPI */ = {
@@ -202,6 +200,17 @@
 				EDA33D38245E0316004892FB /* LaunchScreen.storyboard */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EDD358E4246248A6002AB9F7 /* AsyncImage */ = {
+			isa = PBXGroup;
+			children = (
+				EDD358DC246248A1002AB9F7 /* AsyncImage.swift */,
+				EDD358DF246248A2002AB9F7 /* EnvironmentValues+ImageCache.swift */,
+				EDD358DD246248A1002AB9F7 /* ImageCache.swift */,
+				EDD358DE246248A2002AB9F7 /* ImageLoader.swift */,
+			);
+			path = AsyncImage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -306,7 +315,9 @@
 			files = (
 				ED1ECC612460E89400202A39 /* Tweet+Preview.swift in Sources */,
 				ED1ECC662460E9CF00202A39 /* MockTwitterService.swift in Sources */,
+				EDD358E1246248A2002AB9F7 /* ImageCache.swift in Sources */,
 				ED9EA918245F09920064C078 /* TwitterError.swift in Sources */,
+				EDD358E3246248A2002AB9F7 /* EnvironmentValues+ImageCache.swift in Sources */,
 				ED7B1E8D245F72B9001391BB /* TweetRowViewModel.swift in Sources */,
 				ED024490245E0FD4006A3EBA /* SearchTweetsViewModel.swift in Sources */,
 				EDA33D2E245E0315004892FB /* AppDelegate.swift in Sources */,
@@ -314,11 +325,12 @@
 				EDA33D30245E0315004892FB /* SceneDelegate.swift in Sources */,
 				ED1ECC632460E95C00202A39 /* TweetRowViewModel+Preview.swift in Sources */,
 				ED7B1E8F245F90D6001391BB /* TweetRow.swift in Sources */,
+				EDD358E2246248A2002AB9F7 /* ImageLoader.swift in Sources */,
+				EDD358E0246248A2002AB9F7 /* AsyncImage.swift in Sources */,
 				EDA33D32245E0315004892FB /* SearchTweetsView.swift in Sources */,
 				EDA5B928245E4C760053C8D6 /* TwitterService.swift in Sources */,
 				ED1ECC682460EA0900202A39 /* TweetResponse+Preview.swift in Sources */,
 				ED0B561B245F11C000E0B93A /* Deserialization.swift in Sources */,
-				ED7B1E87245F4813001391BB /* UIImage+Fetch.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -471,6 +483,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEBUG_ACTIVITY_MODE = "";
+				"DEBUG_ACTIVITY_MODE[sdk=iphonesimulator*]" = default;
 				DEVELOPMENT_TEAM = SPV75LEEXQ;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "TwitterCloneApp/Supporting Files/Info.plist";
@@ -490,6 +504,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEBUG_ACTIVITY_MODE = "";
 				DEVELOPMENT_TEAM = SPV75LEEXQ;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "TwitterCloneApp/Supporting Files/Info.plist";

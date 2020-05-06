@@ -33,7 +33,7 @@ extension SearchTweetsViewModel {
     func fetchTweetContents(for searchText: String) {
         twitterService.tweets(forSearch: searchText)
         .map { response in
-            response.statuses.map(TweetRowViewModel.init)
+            response.statuses.compactMap(TweetRowViewModel.init)
           }
           .receive(on: DispatchQueue.main)
           .sink(
