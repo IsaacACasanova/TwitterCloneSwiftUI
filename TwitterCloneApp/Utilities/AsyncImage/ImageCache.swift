@@ -20,3 +20,10 @@ struct TemporaryImageCache: ImageCache {
         set { newValue == nil ? cache.removeObject(forKey: key as NSURL) : cache.setObject(newValue!, forKey: key as NSURL) }
     }
 }
+
+struct MockImageCache: ImageCache {
+    subscript(url: URL) -> UIImage? {
+        get { nil }
+        set { }
+    }
+}

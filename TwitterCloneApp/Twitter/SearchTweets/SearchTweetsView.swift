@@ -10,7 +10,8 @@ import Combine
 import SwiftUI
 
 struct SearchTweetsView: View {
-    
+
+    @Environment(\.imageCache) var cache: ImageCache
     @ObservedObject private var viewModel: SearchTweetsViewModel
     
     init(viewModel: SearchTweetsViewModel) {
@@ -49,7 +50,9 @@ extension SearchTweetsView {
     
     var tweetSection: some View {
         Section {
-            ForEach(viewModel.dataSource, content: TweetRow.init)
+            ForEach(viewModel.dataSource) { rowViewModel in
+                TweetRow(imageCache: self.cache, viewModel: rowViewModel)
+            }
         }
     }
 }

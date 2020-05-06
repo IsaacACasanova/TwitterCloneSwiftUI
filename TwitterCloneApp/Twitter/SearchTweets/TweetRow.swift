@@ -9,11 +9,12 @@
 import SwiftUI
 
 struct TweetRow: View {
-    @Environment(\.imageCache) var cache: ImageCache
     
+    private let imageCache: ImageCache
     private let viewModel: TweetRowViewModel
     
-    init(viewModel: TweetRowViewModel) {
+    init(imageCache: ImageCache, viewModel: TweetRowViewModel) {
+        self.imageCache = imageCache
         self.viewModel = viewModel
     }
     
@@ -22,7 +23,7 @@ struct TweetRow: View {
             HStack {
                 AsyncImage(
                     url: viewModel.avatarURL,
-                   cache: self.cache,
+                   cache: self.imageCache,
                    placeholder: Image("twitter_default_profile_image"),
                    configuration: { $0.resizable() }
                 )
@@ -56,6 +57,6 @@ struct TweetRow: View {
 
 struct TweetRow_Previews: PreviewProvider {
     static var previews: some View {
-        TweetRow(viewModel: .preview)
+        TweetRow(imageCache: MockImageCache(), viewModel: .preview)
     }
 }
