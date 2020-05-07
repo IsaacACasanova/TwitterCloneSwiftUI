@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,7 @@
 		ED19D8452463947C00196961 /* SearchTweetsViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED19D8442463947C00196961 /* SearchTweetsViewSpec.swift */; };
 		ED19D84A2463952100196961 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED19D8482463952100196961 /* Quick.framework */; };
 		ED19D84B2463952100196961 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED19D8492463952100196961 /* Nimble.framework */; };
+		ED19D84E24639FC000196961 /* ViewInspector in Frameworks */ = {isa = PBXBuildFile; productRef = ED19D84D24639FC000196961 /* ViewInspector */; };
 		ED1ECC612460E89400202A39 /* Tweet+Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1ECC602460E89400202A39 /* Tweet+Preview.swift */; };
 		ED1ECC632460E95C00202A39 /* TweetRowViewModel+Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1ECC622460E95C00202A39 /* TweetRowViewModel+Preview.swift */; };
 		ED1ECC662460E9CF00202A39 /* MockTwitterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1ECC652460E9CF00202A39 /* MockTwitterService.swift */; };
@@ -88,6 +89,7 @@
 			files = (
 				ED19D84B2463952100196961 /* Nimble.framework in Frameworks */,
 				ED19D84A2463952100196961 /* Quick.framework in Frameworks */,
+				ED19D84E24639FC000196961 /* ViewInspector in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,6 +269,9 @@
 				EDA33D42245E0317004892FB /* PBXTargetDependency */,
 			);
 			name = TwitterCloneAppTests;
+			packageProductDependencies = (
+				ED19D84D24639FC000196961 /* ViewInspector */,
+			);
 			productName = TwitterCloneAppTests;
 			productReference = EDA33D40245E0317004892FB /* TwitterCloneAppTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -299,6 +304,9 @@
 				Base,
 			);
 			mainGroup = EDA33D21245E0314004892FB;
+			packageReferences = (
+				ED19D84C24639FC000196961 /* XCRemoteSwiftPackageReference "ViewInspector" */,
+			);
 			productRefGroup = EDA33D2B245E0314004892FB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -646,6 +654,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		ED19D84C24639FC000196961 /* XCRemoteSwiftPackageReference "ViewInspector" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/nalexn/ViewInspector";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.3.11;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		ED19D84D24639FC000196961 /* ViewInspector */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ED19D84C24639FC000196961 /* XCRemoteSwiftPackageReference "ViewInspector" */;
+			productName = ViewInspector;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EDA33D22245E0314004892FB /* Project object */;
 }
