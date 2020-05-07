@@ -9,10 +9,28 @@
 import Combine
 import Foundation
 
-class SearchTweetsViewModel: ObservableObject, Identifiable {
+protocol SearchTweetsViewModelType: ObservableObject, Identifiable {
+    var searchText: String { get set }
+    var searchTextPublished: Published<String> { get }
+    var searchTextPublisher: Published<String>.Publisher { get }
     
+    var dataSource: [TweetRowViewModel] { get set }
+    var dataSourcePublished: Published<[TweetRowViewModel]> { get }
+    var dataSourcePublisher: Published<[TweetRowViewModel]>.Publisher { get }
+    
+    var cache: ImageCache { get }
+}
+
+class SearchTweetsViewModel: SearchTweetsViewModelType {
+        
     @Published var searchText: String = ""
+    var searchTextPublished: Published<String> { _searchText }
+    var searchTextPublisher: Published<String>.Publisher { $searchText }
+    
     @Published var dataSource: [TweetRowViewModel] = []
+    var dataSourcePublished: Published<[TweetRowViewModel]> { _dataSource }
+    var dataSourcePublisher: Published<[TweetRowViewModel]>.Publisher { $dataSource }
+    
     let cache: ImageCache = TemporaryImageCache()
     
     private let twitterService: TwitterServiceType

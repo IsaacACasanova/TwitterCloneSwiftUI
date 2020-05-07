@@ -15,9 +15,10 @@
 		ED19D84A2463952100196961 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED19D8482463952100196961 /* Quick.framework */; };
 		ED19D84B2463952100196961 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED19D8492463952100196961 /* Nimble.framework */; };
 		ED19D84E24639FC000196961 /* ViewInspector in Frameworks */ = {isa = PBXBuildFile; productRef = ED19D84D24639FC000196961 /* ViewInspector */; };
+		ED19D85224642ED800196961 /* MockTwitterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1ECC652460E9CF00202A39 /* MockTwitterService.swift */; };
+		ED19D85324642EDC00196961 /* MockSearchTweetsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED19D84F24642E8000196961 /* MockSearchTweetsViewModel.swift */; };
 		ED1ECC612460E89400202A39 /* Tweet+Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1ECC602460E89400202A39 /* Tweet+Preview.swift */; };
 		ED1ECC632460E95C00202A39 /* TweetRowViewModel+Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1ECC622460E95C00202A39 /* TweetRowViewModel+Preview.swift */; };
-		ED1ECC662460E9CF00202A39 /* MockTwitterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1ECC652460E9CF00202A39 /* MockTwitterService.swift */; };
 		ED1ECC682460EA0900202A39 /* TweetResponse+Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1ECC672460EA0900202A39 /* TweetResponse+Preview.swift */; };
 		ED7B1E8D245F72B9001391BB /* TweetRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7B1E8C245F72B9001391BB /* TweetRowViewModel.swift */; };
 		ED7B1E8F245F90D6001391BB /* TweetRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7B1E8E245F90D6001391BB /* TweetRow.swift */; };
@@ -52,6 +53,7 @@
 		ED19D8442463947C00196961 /* SearchTweetsViewSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTweetsViewSpec.swift; sourceTree = "<group>"; };
 		ED19D8482463952100196961 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		ED19D8492463952100196961 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
+		ED19D84F24642E8000196961 /* MockSearchTweetsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSearchTweetsViewModel.swift; sourceTree = "<group>"; };
 		ED1ECC602460E89400202A39 /* Tweet+Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tweet+Preview.swift"; sourceTree = "<group>"; };
 		ED1ECC622460E95C00202A39 /* TweetRowViewModel+Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TweetRowViewModel+Preview.swift"; sourceTree = "<group>"; };
 		ED1ECC652460E9CF00202A39 /* MockTwitterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTwitterService.swift; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				ED1ECC652460E9CF00202A39 /* MockTwitterService.swift */,
+				ED19D84F24642E8000196961 /* MockSearchTweetsViewModel.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -365,8 +368,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED1ECC612460E89400202A39 /* Tweet+Preview.swift in Sources */,
-				ED1ECC662460E9CF00202A39 /* MockTwitterService.swift in Sources */,
 				EDD358E1246248A2002AB9F7 /* ImageCache.swift in Sources */,
+				ED19D85324642EDC00196961 /* MockSearchTweetsViewModel.swift in Sources */,
 				ED9EA918245F09920064C078 /* TwitterError.swift in Sources */,
 				EDD358E3246248A2002AB9F7 /* EnvironmentValues+ImageCache.swift in Sources */,
 				ED7B1E8D245F72B9001391BB /* TweetRowViewModel.swift in Sources */,
@@ -380,6 +383,7 @@
 				EDD358E2246248A2002AB9F7 /* ImageLoader.swift in Sources */,
 				EDD358E0246248A2002AB9F7 /* AsyncImage.swift in Sources */,
 				EDA33D32245E0315004892FB /* SearchTweetsView.swift in Sources */,
+				ED19D85224642ED800196961 /* MockTwitterService.swift in Sources */,
 				EDA5B928245E4C760053C8D6 /* TwitterService.swift in Sources */,
 				ED1ECC682460EA0900202A39 /* TweetResponse+Preview.swift in Sources */,
 				ED0B561B245F11C000E0B93A /* Deserialization.swift in Sources */,
