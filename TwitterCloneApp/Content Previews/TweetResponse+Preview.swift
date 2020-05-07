@@ -8,6 +8,6 @@
 
 import Foundation
 
-extension TweetsResponse {
+extension TweetsResponse: Previewed {
     static let preview = TweetsResponse(statuses: [.preview])
 }

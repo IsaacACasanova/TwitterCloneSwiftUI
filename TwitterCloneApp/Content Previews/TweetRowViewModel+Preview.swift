@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension TweetRowViewModel {
+extension TweetRowViewModel: Previewed {
     static let preview = TweetRowViewModel(with: .preview)
 }
 
