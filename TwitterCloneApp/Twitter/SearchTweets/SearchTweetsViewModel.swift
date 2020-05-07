@@ -13,6 +13,7 @@ class SearchTweetsViewModel: ObservableObject, Identifiable {
     
     @Published var searchText: String = ""
     @Published var dataSource: [TweetRowViewModel] = []
+    let cache: ImageCache = TemporaryImageCache()
     
     private let twitterService: TwitterServiceType
     private var disposables = Set<AnyCancellable>()
