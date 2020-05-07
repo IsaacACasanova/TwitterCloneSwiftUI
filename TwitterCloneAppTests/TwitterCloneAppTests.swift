@@ -2,12 +2,11 @@
 //  TwitterCloneAppTests.swift
 //  TwitterCloneAppTests
 //
-//  Created by Isaac  Casanova on 5/2/20.
+//  Created by Isaac  Casanova on 5/6/20.
 //  Copyright © 2020 Isaac  Casanova. All rights reserved.
 //
 
 import XCTest
-@testable import TwitterCloneApp
 
 class TwitterCloneAppTests: XCTestCase {
 
@@ -26,7 +25,7 @@ class TwitterCloneAppTests: XCTestCase {
 
     func testPerformanceExample() throws {
         // This is an example of a performance test case.
-        self.measure {
+        measure {
             // Put the code you want to measure the time of here.
         }
     }
