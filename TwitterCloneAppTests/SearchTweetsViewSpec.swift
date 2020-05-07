@@ -22,7 +22,7 @@ extension SearchTweetsViewSpec {
         beforeEach { self.subject = self.newSubject }
         describe("init") {
             it("displays a searchField with the proper default text") {
-                let searchFieldText = try! self.subject
+                let searchFieldText = try? self.subject
                     .inspect()
                     .view(SearchTweetsView.self)
                     .navigationView()
@@ -35,7 +35,7 @@ extension SearchTweetsViewSpec {
             }
             
             it("displays an emptySection with the proper text") {
-                let emptySectionText = try! self.subject
+                let emptySectionText = try? self.subject
                     .inspect()
                     .view(SearchTweetsView.self)
                     .navigationView()
