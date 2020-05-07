@@ -20,18 +20,31 @@ class SearchTweetsViewSpec: QuickSpec {
 extension SearchTweetsViewSpec {
     override func spec() {
         beforeEach { self.subject = self.newSubject }
-        describe("searchField") {
-            it("displays the proper default text") {
+        describe("init") {
+            it("displays a searchField with the proper default text") {
                 let searchFieldText = try! self.subject
                     .inspect()
                     .view(SearchTweetsView.self)
                     .navigationView()
-                    .list(0)
-                    .hStack(0)
+                    .list(0)[0]
+                    .hStack()
                     .textField(0)
                     .text()
                     .string()
                 expect(searchFieldText).to(equal("Search Tweets"))
+            }
+            
+            it("displays an emptySection with the proper text") {
+                let emptySectionText = try! self.subject
+                    .inspect()
+                    .view(SearchTweetsView.self)
+                    .navigationView()
+                    .list(0)[1]
+                    .section()
+                    .text(0)
+                    .string()
+
+                expect(emptySectionText).to(equal("No results"))
             }
         }
     }
