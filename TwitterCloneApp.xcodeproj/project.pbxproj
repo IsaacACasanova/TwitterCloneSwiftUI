@@ -134,8 +134,8 @@
 		ED1ECC5F2460E87400202A39 /* Content Previews */ = {
 			isa = PBXGroup;
 			children = (
-				ED1ECC602460E89400202A39 /* Tweet+Preview.swift */,
 				066103FF246113EA00059FF2 /* Previewed.swift */,
+				ED1ECC602460E89400202A39 /* Tweet+Preview.swift */,
 				ED1ECC672460EA0900202A39 /* TweetResponse+Preview.swift */,
 				ED1ECC622460E95C00202A39 /* TweetRowViewModel+Preview.swift */,
 			);
