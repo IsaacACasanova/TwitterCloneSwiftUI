@@ -6,4 +6,7 @@
 //  Copyright © 2020 Isaac  Casanova. All rights reserved.
 //
 
-import Foundation
+import Nimble
+import Quick
+
+class SearchTweetsViewSpec: QuickSpec { }
