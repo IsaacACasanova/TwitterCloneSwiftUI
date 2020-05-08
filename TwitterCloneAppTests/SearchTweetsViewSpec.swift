@@ -94,14 +94,12 @@ extension SearchTweetsViewSpec {
 // MARK: - Helpers
 private extension SearchTweetsViewSpec {
     var newSubject: SearchTweetsView {
-        let mockService = MockTwitterService()
-        let viewModel = SearchTweetsViewModel(twitterService: mockService)
+         let viewModel = MockSearchTweetsViewModel()
         return SearchTweetsView(viewModel: viewModel)
     }
     
     var newSubjectWithDataSource: SearchTweetsView {
-        let mockService = MockTwitterService()
-        let viewModel = SearchTweetsViewModel(twitterService: mockService)
+        let viewModel = MockSearchTweetsViewModel()
         viewModel.dataSource = [.preview]
         return SearchTweetsView(viewModel: viewModel)
     }

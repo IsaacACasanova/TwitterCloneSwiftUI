@@ -31,16 +31,18 @@ class SearchTweetsViewModel: SearchTweetsViewModelType {
     var dataSourcePublished: Published<[TweetRowViewModel]> { _dataSource }
     var dataSourcePublisher: Published<[TweetRowViewModel]>.Publisher { $dataSource }
     
-    let cache: ImageCache = TemporaryImageCache()
+    let cache: ImageCache
     
     private let twitterService: TwitterServiceType
     private var disposables = Set<AnyCancellable>()
     
     init(twitterService: TwitterServiceType,
+         cache: ImageCache = TemporaryImageCache(),
          scheduler: DispatchQueue = DispatchQueue(label: "SearchTweetsViewModel")) {
         self.twitterService = twitterService
+        self.cache = cache
         
-        $searchText
+        _searchText.projectedValue
          .dropFirst(1)
          .debounce(for: .seconds(0.5), scheduler: scheduler)
          .sink(receiveValue: fetchTweetContents(for:))

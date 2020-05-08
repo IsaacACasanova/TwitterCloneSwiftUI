@@ -7,15 +7,16 @@
 //
 
 import Combine
+import Foundation
 
-class MockSearchTweetsViewModel: SearchTweetsViewModelType {
-    @Published var searchText: String = ""
-    var searchTextPublished: Published<String> { _searchText }
-    var searchTextPublisher: Published<String>.Publisher { $searchText }
-    
-    @Published var dataSource: [TweetRowViewModel] = []
-    var dataSourcePublished: Published<[TweetRowViewModel]> { _dataSource }
-    var dataSourcePublisher: Published<[TweetRowViewModel]>.Publisher { $dataSource }
-    
-    var cache: ImageCache = MockImageCache()
+class MockSearchTweetsViewModel: SearchTweetsViewModel {
+    override init(twitterService: TwitterServiceType = MockTwitterService(),
+                  cache: ImageCache = TemporaryImageCache(),
+                  scheduler: DispatchQueue = .main) {
+        super.init(
+            twitterService: twitterService,
+            cache: cache,
+            scheduler: scheduler
+        )
+    }
 }
