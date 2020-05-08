@@ -11,7 +11,7 @@ import Foundation
 
 class MockSearchTweetsViewModel: SearchTweetsViewModel {
     override init(twitterService: TwitterServiceType = MockTwitterService(),
-                  cache: ImageCache = TemporaryImageCache(),
+                  cache: ImageCache = MockImageCache(),
                   scheduler: DispatchQueue = .main) {
         super.init(
             twitterService: twitterService,
