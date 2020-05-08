@@ -62,7 +62,7 @@ extension SearchTweetsView {
 struct SearchTweetsView_Previews: PreviewProvider {
     static var previews: some View {
         let viewModel = MockSearchTweetsViewModel()
-        viewModel.searchText = "Kodak Black"
+        viewModel.searchText = ""
         viewModel.dataSource = [.preview]
         return SearchTweetsView(viewModel: viewModel)
     }

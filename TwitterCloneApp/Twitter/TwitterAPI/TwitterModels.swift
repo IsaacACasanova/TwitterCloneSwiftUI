@@ -12,9 +12,10 @@ struct TweetsResponse: Codable {
     let statuses: [Tweet]
     
     struct Tweet: Codable {
+        let createdAt: String
         let text: String
         let user: User
-        
+
         struct User: Codable {
             let name: String
             let screenName: String

@@ -20,6 +20,7 @@
 		ED1ECC612460E89400202A39 /* Tweet+Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1ECC602460E89400202A39 /* Tweet+Preview.swift */; };
 		ED1ECC632460E95C00202A39 /* TweetRowViewModel+Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1ECC622460E95C00202A39 /* TweetRowViewModel+Preview.swift */; };
 		ED1ECC682460EA0900202A39 /* TweetResponse+Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1ECC672460EA0900202A39 /* TweetResponse+Preview.swift */; };
+		ED4881682464EE1C00CC66BD /* DateFormatterWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4881672464EE1C00CC66BD /* DateFormatterWrapper.swift */; };
 		ED7B1E8D245F72B9001391BB /* TweetRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7B1E8C245F72B9001391BB /* TweetRowViewModel.swift */; };
 		ED7B1E8F245F90D6001391BB /* TweetRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7B1E8E245F90D6001391BB /* TweetRow.swift */; };
 		ED9EA918245F09920064C078 /* TwitterError.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9EA917245F09920064C078 /* TwitterError.swift */; };
@@ -58,6 +59,7 @@
 		ED1ECC622460E95C00202A39 /* TweetRowViewModel+Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TweetRowViewModel+Preview.swift"; sourceTree = "<group>"; };
 		ED1ECC652460E9CF00202A39 /* MockTwitterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTwitterService.swift; sourceTree = "<group>"; };
 		ED1ECC672460EA0900202A39 /* TweetResponse+Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TweetResponse+Preview.swift"; sourceTree = "<group>"; };
+		ED4881672464EE1C00CC66BD /* DateFormatterWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatterWrapper.swift; sourceTree = "<group>"; };
 		ED7B1E8C245F72B9001391BB /* TweetRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetRowViewModel.swift; sourceTree = "<group>"; };
 		ED7B1E8E245F90D6001391BB /* TweetRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetRow.swift; sourceTree = "<group>"; };
 		ED9EA917245F09920064C078 /* TwitterError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterError.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 		ED0B5618245F106C00E0B93A /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				ED4881662464EE0600CC66BD /* DateFormatter */,
 				EDD358E4246248A6002AB9F7 /* AsyncImage */,
 				ED0B5619245F117600E0B93A /* Deserialization */,
 			);
@@ -153,6 +156,14 @@
 				ED19D84F24642E8000196961 /* MockSearchTweetsViewModel.swift */,
 			);
 			path = Mocks;
+			sourceTree = "<group>";
+		};
+		ED4881662464EE0600CC66BD /* DateFormatter */ = {
+			isa = PBXGroup;
+			children = (
+				ED4881672464EE1C00CC66BD /* DateFormatterWrapper.swift */,
+			);
+			path = DateFormatter;
 			sourceTree = "<group>";
 		};
 		ED9EA915245F048D0064C078 /* TwitterAPI */ = {
@@ -369,6 +380,7 @@
 			files = (
 				ED1ECC612460E89400202A39 /* Tweet+Preview.swift in Sources */,
 				EDD358E1246248A2002AB9F7 /* ImageCache.swift in Sources */,
+				ED4881682464EE1C00CC66BD /* DateFormatterWrapper.swift in Sources */,
 				ED19D85324642EDC00196961 /* MockSearchTweetsViewModel.swift in Sources */,
 				ED9EA918245F09920064C078 /* TwitterError.swift in Sources */,
 				EDD358E3246248A2002AB9F7 /* EnvironmentValues+ImageCache.swift in Sources */,

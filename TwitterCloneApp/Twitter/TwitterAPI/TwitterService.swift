@@ -62,7 +62,8 @@ private extension TwitterService {
         components.path = TwitterAPI.path + "/search/tweets.json"
         components.queryItems = [
             URLQueryItem(name: "q", value: searchQuery),
-            URLQueryItem(name: "lang", value: "en")
+            URLQueryItem(name: "lang", value: "en"),
+            URLQueryItem(name: "include_entities", value: "false")
         ]
         
         guard let url = components.url else {

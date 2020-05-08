@@ -23,7 +23,7 @@ struct TweetRow: View {
             HStack {
                 AsyncImage(
                     url: viewModel.avatarURL,
-                   cache: self.imageCache,
+                   cache: imageCache,
                    placeholder: Image("twitter_default_profile_image"),
                    configuration: { $0.resizable() }
                 )
@@ -50,6 +50,12 @@ struct TweetRow: View {
                     .bold()
             }
             .padding(8)
+            HStack {
+                Spacer()
+                Text("\(viewModel.createdAt)")
+                    .font(.body)
+                    .bold()
+            }
         }
     }
 }

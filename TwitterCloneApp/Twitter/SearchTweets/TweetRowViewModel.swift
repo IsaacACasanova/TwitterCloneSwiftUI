@@ -20,9 +20,11 @@ struct TweetRowViewModel: TweetRowViewModelType {
     let screenName: String
     let avatarURL: URL
     let content: String
+    let createdAt: String
     
     init?(tweet: TweetsResponse.Tweet) {
-        guard let avatarURL = URL(string: tweet.user.avatar) else {
+        guard let avatarURL = URL(string: tweet.user.avatar),
+            let dateString = DateFormatterWrapper.shared.convertedDateString(for: tweet.createdAt) else {
             return nil
         }
         
@@ -30,6 +32,7 @@ struct TweetRowViewModel: TweetRowViewModelType {
         self.screenName = "@" + tweet.user.screenName
         self.avatarURL = avatarURL
         self.content = tweet.text
+        self.createdAt = dateString
     }
 }
 
