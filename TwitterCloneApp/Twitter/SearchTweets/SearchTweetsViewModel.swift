@@ -45,6 +45,7 @@ class SearchTweetsViewModel: SearchTweetsViewModelType {
         _searchText.projectedValue
          .dropFirst(1)
          .debounce(for: .seconds(0.5), scheduler: scheduler)
+         .removeDuplicates()
          .sink(receiveValue: fetchTweetContents(for:))
          .store(in: &disposables)
     }

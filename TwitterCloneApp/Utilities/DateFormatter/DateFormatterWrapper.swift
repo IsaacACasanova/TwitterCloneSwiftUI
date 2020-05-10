@@ -10,11 +10,14 @@ import Foundation
 
 class DateFormatterWrapper {
     static let shared = DateFormatterWrapper()
+    
     private lazy var formatter: DateFormatter = {
         let dateFormatter = DateFormatter()
         return dateFormatter
     }()
-    
+}
+
+extension DateFormatterWrapper {
     func convertedDateString(for dateString: String) -> String? {
         formatter.dateFormat = "E, MMM d HH:mm:ss Z yyyy"
         formatter.locale = Locale(identifier: "en_US_POSIX")

@@ -34,6 +34,7 @@
 		EDD358E1246248A2002AB9F7 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD358DD246248A1002AB9F7 /* ImageCache.swift */; };
 		EDD358E2246248A2002AB9F7 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD358DE246248A2002AB9F7 /* ImageLoader.swift */; };
 		EDD358E3246248A2002AB9F7 /* EnvironmentValues+ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD358DF246248A2002AB9F7 /* EnvironmentValues+ImageCache.swift */; };
+		EDF8A02124685E2000EE26A8 /* SearchTweetsViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF8A02024685E2000EE26A8 /* SearchTweetsViewModelSpec.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		EDD358DD246248A1002AB9F7 /* ImageCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 		EDD358DE246248A2002AB9F7 /* ImageLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		EDD358DF246248A2002AB9F7 /* EnvironmentValues+ImageCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EnvironmentValues+ImageCache.swift"; sourceTree = "<group>"; };
+		EDF8A02024685E2000EE26A8 /* SearchTweetsViewModelSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTweetsViewModelSpec.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -220,6 +222,7 @@
 			isa = PBXGroup;
 			children = (
 				ED19D8442463947C00196961 /* SearchTweetsViewSpec.swift */,
+				EDF8A02024685E2000EE26A8 /* SearchTweetsViewModelSpec.swift */,
 				EDA33D46245E0317004892FB /* Info.plist */,
 			);
 			path = TwitterCloneAppTests;
@@ -407,6 +410,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED19D8452463947C00196961 /* SearchTweetsViewSpec.swift in Sources */,
+				EDF8A02124685E2000EE26A8 /* SearchTweetsViewModelSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

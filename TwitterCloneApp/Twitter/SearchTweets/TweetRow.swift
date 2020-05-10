@@ -36,6 +36,7 @@ struct TweetRow: View {
                         .bold()
                     Text(viewModel.screenName)
                         .font(.caption)
+                        .fontWeight(.light)
                 }
                 Spacer()
                 Image("Twitter_Logo_Blue")
@@ -47,14 +48,14 @@ struct TweetRow: View {
             HStack {
                 Text(viewModel.content)
                     .font(.body)
-                    .bold()
+                    .fontWeight(.light)
             }
             .padding(8)
             HStack {
                 Spacer()
                 Text("\(viewModel.createdAt)")
                     .font(.body)
-                    .bold()
+                    .fontWeight(.medium)
             }
         }
     }
