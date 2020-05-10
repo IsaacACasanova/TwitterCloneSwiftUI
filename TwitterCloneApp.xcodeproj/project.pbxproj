@@ -35,6 +35,7 @@
 		EDD358E2246248A2002AB9F7 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD358DE246248A2002AB9F7 /* ImageLoader.swift */; };
 		EDD358E3246248A2002AB9F7 /* EnvironmentValues+ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD358DF246248A2002AB9F7 /* EnvironmentValues+ImageCache.swift */; };
 		EDF8A02124685E2000EE26A8 /* SearchTweetsViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF8A02024685E2000EE26A8 /* SearchTweetsViewModelSpec.swift */; };
+		EDF8A02324685E5D00EE26A8 /* DateFormatterWrapperSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF8A02224685E5D00EE26A8 /* DateFormatterWrapperSpec.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,7 @@
 		EDD358DE246248A2002AB9F7 /* ImageLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		EDD358DF246248A2002AB9F7 /* EnvironmentValues+ImageCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EnvironmentValues+ImageCache.swift"; sourceTree = "<group>"; };
 		EDF8A02024685E2000EE26A8 /* SearchTweetsViewModelSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTweetsViewModelSpec.swift; sourceTree = "<group>"; };
+		EDF8A02224685E5D00EE26A8 /* DateFormatterWrapperSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatterWrapperSpec.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -223,6 +225,7 @@
 			children = (
 				ED19D8442463947C00196961 /* SearchTweetsViewSpec.swift */,
 				EDF8A02024685E2000EE26A8 /* SearchTweetsViewModelSpec.swift */,
+				EDF8A02224685E5D00EE26A8 /* DateFormatterWrapperSpec.swift */,
 				EDA33D46245E0317004892FB /* Info.plist */,
 			);
 			path = TwitterCloneAppTests;
@@ -411,6 +414,7 @@
 			files = (
 				ED19D8452463947C00196961 /* SearchTweetsViewSpec.swift in Sources */,
 				EDF8A02124685E2000EE26A8 /* SearchTweetsViewModelSpec.swift in Sources */,
+				EDF8A02324685E5D00EE26A8 /* DateFormatterWrapperSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
