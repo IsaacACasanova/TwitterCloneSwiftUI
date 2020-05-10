@@ -15,16 +15,16 @@ extension SearchTweetsView: Inspectable { }
 extension TweetRow: Inspectable { }
 
 class SearchTweetsViewSpec: QuickSpec {
-    var subject: SearchTweetsView!
     var viewModel: SearchTweetsViewModel!
 }
 
 extension SearchTweetsViewSpec {
     override func spec() {
-        beforeEach { self.subject = self.newSubject }
+        var subject: SearchTweetsView!
+        beforeEach { subject = self.newSubject }
         describe("on creation") {
             it("displays a searchField with the proper default text") {
-                let searchFieldText = try? self.subject
+                let searchFieldText = try? subject
                 .inspect()
                 .view(SearchTweetsView.self)
                 .navigationView()
@@ -37,7 +37,7 @@ extension SearchTweetsViewSpec {
             }
             
             it("displays an emptySection with the proper text") {
-                let emptySectionText = try? self.subject
+                let emptySectionText = try? subject
                 .inspect()
                 .view(SearchTweetsView.self)
                 .navigationView()
@@ -52,8 +52,8 @@ extension SearchTweetsViewSpec {
         describe("entering a value") {
             context("when a value is entered into the searchField") {
                 beforeEach {
-                    self.subject = self.newSubjectWithDataSource
-                    try? self.subject
+                    subject = self.newSubjectWithDataSource
+                    try? subject
                     .inspect()
                     .view(SearchTweetsView.self)
                     .navigationView()
@@ -64,7 +64,7 @@ extension SearchTweetsViewSpec {
                 }
                 
                 it("renders TweetRows") {
-                    let rows = try? self.subject
+                    let rows = try? subject
                     .inspect()
                     .view(SearchTweetsView.self)
                     .navigationView()
@@ -76,7 +76,7 @@ extension SearchTweetsViewSpec {
                 }
                 
                 it("does not render the emptySection") {
-                    let emptySectionText = try? self.subject
+                    let emptySectionText = try? subject
                     .inspect()
                     .view(SearchTweetsView.self)
                     .navigationView()

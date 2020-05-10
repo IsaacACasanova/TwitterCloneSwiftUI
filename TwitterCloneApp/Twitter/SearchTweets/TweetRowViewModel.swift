@@ -41,3 +41,5 @@ extension TweetRowViewModel: Identifiable {
         return name + screenName + content
     }
 }
+
+extension TweetRowViewModel: Equatable { }

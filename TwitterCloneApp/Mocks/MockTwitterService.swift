@@ -9,11 +9,24 @@
 import Combine
 
 struct MockTwitterService: TwitterServiceType {
+    
+    private let success: Bool
+    
+    init(success: Bool = true) {
+        self.success = success
+    }
+   
     func tweets(forSearch search: String) -> AnyPublisher<TweetsResponse, TwitterError> {
-        Just(.preview)
-        .mapError { error in
-            .deserialization(description: error.localizedDescription)
+        
+        guard success else {
+            return Fail(error: TwitterError.network(description: "Networking Error!"))
+            .eraseToAnyPublisher()
         }
-        .eraseToAnyPublisher()
+        
+        return Just(.preview)
+            .mapError { error in
+                .deserialization(description: error.localizedDescription)
+            }
+            .eraseToAnyPublisher()
     }
 }

@@ -54,7 +54,7 @@ class SearchTweetsViewModel: SearchTweetsViewModelType {
 extension SearchTweetsViewModel {
     func fetchTweetContents(for searchText: String) {
         twitterService.tweets(forSearch: searchText)
-        .map { response in
+          .map { response in
             response.statuses.compactMap(TweetRowViewModel.init)
           }
           .receive(on: DispatchQueue.main)
