@@ -20,44 +20,30 @@ struct TweetRow: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-            HStack {
+            HStack(alignment: .top) {
                 AsyncImage(
                     url: viewModel.avatarURL,
                    cache: imageCache,
                    placeholder: Image("twitter_default_profile_image"),
                    configuration: { $0.resizable() }
                 )
-                .frame(width: 40.0, height: 40.0)
+                .frame(width: 50.0, height: 50.0)
                 .clipShape(Circle())
-                .shadow(radius: 10)
-                
                 VStack(alignment: .leading) {
-                    Text(viewModel.name)
-                        .bold()
-                    Text(viewModel.screenName)
-                        .font(.caption)
+                    HStack {
+                        Text(viewModel.name)
+                            .bold()
+                        Text(viewModel.screenName)
+                            .font(.caption)
+                            .fontWeight(.light)
+                    }
+                    Text(viewModel.content)
+                        .font(.body)
                         .fontWeight(.light)
                 }
-                Spacer()
-                Image("Twitter_Logo_Blue")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 30.0, height: 30.0)
-            }
-            .padding(8)
-            HStack {
-                Text(viewModel.content)
-                    .font(.body)
-                    .fontWeight(.light)
-            }
-            .padding(8)
-            HStack {
-                Spacer()
-                Text("\(viewModel.createdAt)")
-                    .font(.body)
-                    .fontWeight(.medium)
             }
         }
+        .padding([.top, .bottom])
     }
 }
 
