@@ -8,7 +8,11 @@
 
 import Foundation
 
-class DateFormatterWrapper {
+protocol DateFormatterWrapperType {
+    func convertedDateString(for dateString: String) -> String?
+}
+
+class DateFormatterWrapper : DateFormatterWrapperType {
     static let shared = DateFormatterWrapper()
     
     private lazy var formatter: DateFormatter = {

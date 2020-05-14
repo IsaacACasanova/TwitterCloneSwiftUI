@@ -21,10 +21,13 @@ struct TweetRowViewModel: TweetRowViewModelType {
     let avatarURL: URL
     let content: String
     let createdAt: String
+
+    private let dateFormatterWrapper: DateFormatterWrapperType
     
-    init?(tweet: TweetsResponse.Tweet) {
+    init?(tweet: TweetsResponse.Tweet,
+          dateFormatterWrapper: DateFormatterWrapperType = DateFormatterWrapper.shared) {
         guard let avatarURL = URL(string: tweet.user.avatar),
-            let dateString = DateFormatterWrapper.shared.convertedDateString(for: tweet.createdAt) else {
+            let dateString = dateFormatterWrapper.convertedDateString(for: tweet.createdAt) else {
             return nil
         }
         
@@ -33,6 +36,7 @@ struct TweetRowViewModel: TweetRowViewModelType {
         self.avatarURL = avatarURL
         self.content = tweet.text
         self.createdAt = dateString
+        self.dateFormatterWrapper = dateFormatterWrapper
     }
 }
 
@@ -42,4 +46,4 @@ extension TweetRowViewModel: Identifiable {
     }
 }
 
-extension TweetRowViewModel: Equatable { }
+//extension TweetRowViewModel: Equatable { }

@@ -14,10 +14,6 @@ extension TweetRowViewModel: Previewed {
 
 private extension TweetRowViewModel {
     init(with tweet: TweetsResponse.Tweet) {
-        self.name = tweet.user.name
-        self.screenName = "@" + tweet.user.screenName
-        self.avatarURL = URL(string: tweet.user.avatar)!
-        self.content = tweet.text
-        self.createdAt = DateFormatterWrapper.shared.convertedDateString(for: tweet.createdAt)!
+        self.init(tweet: tweet, dateFormatterWrapper: DateFormatterWrapper.shared)!
     }
 }
