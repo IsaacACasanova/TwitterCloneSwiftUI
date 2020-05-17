@@ -46,4 +46,12 @@ extension TweetRowViewModel: Identifiable {
     }
 }
 
-//extension TweetRowViewModel: Equatable { }
+extension TweetRowViewModel: Equatable {
+    static func == (lhs: TweetRowViewModel, rhs: TweetRowViewModel) -> Bool {
+        lhs.name == rhs.name &&
+        lhs.screenName == rhs.screenName &&
+        lhs.avatarURL == rhs.avatarURL &&
+        lhs.content == rhs.content &&
+        lhs.createdAt == rhs.createdAt
+    }
+}
