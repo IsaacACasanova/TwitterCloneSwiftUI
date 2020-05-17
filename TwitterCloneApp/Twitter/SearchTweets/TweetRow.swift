@@ -33,8 +33,12 @@ struct TweetRow: View {
                     HStack {
                         Text(viewModel.name)
                             .bold()
+                            .lineLimit(1)
                         Text(viewModel.screenName)
                             .font(.caption)
+                            .fontWeight(.light)
+                        Text(viewModel.createdAt)
+                            .font(.footnote)
                             .fontWeight(.light)
                     }
                     Text(viewModel.content)

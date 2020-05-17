@@ -19,7 +19,7 @@ extension DateFormatterWrapperSpec {
             beforeEach { subject = DateFormatterWrapper() }
             context("when the dateFormat is `E, MMM d HH:mm:ss Z yyyy`") {
                 it("returns a date converted into yyyy-MM-dddd") {
-                    expect(subject.convertedDateString(for: "Wed May 13 12:25:57 +0000 2020")).to(equal("May 13 2020"))
+                    expect(subject.convertedDateString(for: "Wed May 13 12:25:57 +0000 2020")).to(equal("3d"))
                 }
             }
             context("when the dateFormat is doesn't match") {

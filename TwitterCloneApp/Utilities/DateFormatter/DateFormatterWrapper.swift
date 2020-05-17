@@ -30,8 +30,6 @@ extension DateFormatterWrapper {
             return nil
         }
         
-        formatter.dateFormat = "MMM d yyyy"
-
-        return formatter.string(from: initialDate)
+        return initialDate.relativeTimeFromDate()
     }
 }

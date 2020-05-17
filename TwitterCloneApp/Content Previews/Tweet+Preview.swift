@@ -10,7 +10,7 @@ import Foundation
 
 extension TweetsResponse.Tweet: Previewed {
     static let preview = TweetsResponse.Tweet(
-        createdAt: "Fri May 08 01:03:01 +0000 2020",
+        createdAt: "Fri May 12 01:03:01 +0000 2020",
         text: "This is the content of my tweet it's extremely long and full of content check it out 4 score 7 years ago again",
         user: .preview
     )

@@ -31,6 +31,7 @@
 		EDA33D34245E0316004892FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDA33D33245E0316004892FB /* Assets.xcassets */; };
 		EDA33D3A245E0316004892FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDA33D38245E0316004892FB /* LaunchScreen.storyboard */; };
 		EDA5B928245E4C760053C8D6 /* TwitterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA5B927245E4C760053C8D6 /* TwitterService.swift */; };
+		EDACE06A2470C01E003DBAD2 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDACE0692470C01E003DBAD2 /* Date+Extensions.swift */; };
 		EDD358E0246248A2002AB9F7 /* AsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD358DC246248A1002AB9F7 /* AsyncImage.swift */; };
 		EDD358E1246248A2002AB9F7 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD358DD246248A1002AB9F7 /* ImageCache.swift */; };
 		EDD358E2246248A2002AB9F7 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD358DE246248A2002AB9F7 /* ImageLoader.swift */; };
@@ -77,6 +78,7 @@
 		EDA33D40245E0317004892FB /* TwitterCloneAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TwitterCloneAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDA33D46245E0317004892FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EDA5B927245E4C760053C8D6 /* TwitterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterService.swift; sourceTree = "<group>"; };
+		EDACE0692470C01E003DBAD2 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		EDD358DC246248A1002AB9F7 /* AsyncImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncImage.swift; sourceTree = "<group>"; };
 		EDD358DD246248A1002AB9F7 /* ImageCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 		EDD358DE246248A2002AB9F7 /* ImageLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 		ED0B5618245F106C00E0B93A /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				EDACE0682470C013003DBAD2 /* Date */,
 				ED4881662464EE0600CC66BD /* DateFormatter */,
 				EDD358E4246248A6002AB9F7 /* AsyncImage */,
 				ED0B5619245F117600E0B93A /* Deserialization */,
@@ -244,6 +247,14 @@
 				EDA33D38245E0316004892FB /* LaunchScreen.storyboard */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EDACE0682470C013003DBAD2 /* Date */ = {
+			isa = PBXGroup;
+			children = (
+				EDACE0692470C01E003DBAD2 /* Date+Extensions.swift */,
+			);
+			path = Date;
 			sourceTree = "<group>";
 		};
 		EDD358E4246248A6002AB9F7 /* AsyncImage */ = {
@@ -397,6 +408,7 @@
 				ED7B1E8D245F72B9001391BB /* TweetRowViewModel.swift in Sources */,
 				ED024490245E0FD4006A3EBA /* SearchTweetsViewModel.swift in Sources */,
 				06610400246113EA00059FF2 /* Previewed.swift in Sources */,
+				EDACE06A2470C01E003DBAD2 /* Date+Extensions.swift in Sources */,
 				EDA33D2E245E0315004892FB /* AppDelegate.swift in Sources */,
 				ED0B5617245F104C00E0B93A /* TwitterModels.swift in Sources */,
 				EDA33D30245E0315004892FB /* SceneDelegate.swift in Sources */,
