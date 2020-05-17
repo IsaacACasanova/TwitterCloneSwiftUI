@@ -65,5 +65,6 @@ struct SearchTweetsView_Previews: PreviewProvider {
         viewModel.searchText = ""
         viewModel.dataSource = [.preview]
         return SearchTweetsView(viewModel: viewModel)
+        .environment(\.colorScheme, .dark)
     }
 }
