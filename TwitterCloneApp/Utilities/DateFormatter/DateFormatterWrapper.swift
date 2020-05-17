@@ -9,7 +9,13 @@
 import Foundation
 
 protocol DateFormatterWrapperType {
-    func convertedDateString(for dateString: String) -> String?
+    func convertedDateString(for dateString: String, from date: Date) -> String?
+}
+
+extension DateFormatterWrapperType {
+    func convertedDateString(for dateString: String) -> String? {
+        return convertedDateString(for: dateString, from: Date())
+    }
 }
 
 class DateFormatterWrapper : DateFormatterWrapperType {
@@ -22,14 +28,14 @@ class DateFormatterWrapper : DateFormatterWrapperType {
 }
 
 extension DateFormatterWrapper {
-    func convertedDateString(for dateString: String) -> String? {
+    func convertedDateString(for dateString: String, from date: Date = Date()) -> String? {
         formatter.dateFormat = "E, MMM d HH:mm:ss Z yyyy"
         formatter.locale = Locale(identifier: "en_US_POSIX")
         
-        guard let initialDate = formatter.date(from: dateString) else {
+        guard let tweetDate = formatter.date(from: dateString) else {
             return nil
         }
         
-        return initialDate.relativeTimeFromDate()
+        return Date.relativeTimeFromDate(referenceDate: date, tweetDate: tweetDate)
     }
 }

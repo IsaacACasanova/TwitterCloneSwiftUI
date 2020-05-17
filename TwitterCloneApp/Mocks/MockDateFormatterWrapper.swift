@@ -16,7 +16,7 @@ class MockDateFormatterWrapper: DateFormatterWrapperType {
         self.dateString = dateString
     }
     
-    func convertedDateString(for dateString: String) -> String? {
-        return dateString
+    func convertedDateString(for dateString: String, from date: Date) -> String? {
+        dateString
     }
 }

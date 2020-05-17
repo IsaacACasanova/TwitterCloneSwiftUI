@@ -11,8 +11,8 @@
 import Foundation
 
 extension Date {
-    func relativeTimeFromDate() -> String {
-        let secondsPassed = Int(Date().timeIntervalSince(self))
+    static func relativeTimeFromDate(referenceDate : Date, tweetDate: Date) -> String {
+        let secondsPassed = Int(referenceDate.timeIntervalSince(tweetDate))
         let secondsPerMinute = 60
         let secondsPerHour = secondsPerMinute * 60
         let secondsPerDay = secondsPerHour * 24
@@ -29,5 +29,11 @@ extension Date {
         }
         
         return "\(secondsPassed / secondsPerWeek)w"
+    }
+}
+
+extension Date {
+    var noon: Date {
+        return Calendar.current.date(bySettingHour: 12, minute: 0, second: 0, of: self)!
     }
 }
