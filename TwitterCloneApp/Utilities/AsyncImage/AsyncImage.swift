@@ -6,6 +6,8 @@
 //  Copyright © 2020 Vadym Bulavin. All rights reserved.
 //
 
+// Reference - https://www.vadimbulavin.com/asynchronous-swiftui-image-loading-from-url-with-combine-and-swift/
+
 import SwiftUI
 
 struct AsyncImage<Placeholder: View>: View {
